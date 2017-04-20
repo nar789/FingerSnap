@@ -26,12 +26,12 @@ def plotSomething():
         SR.Ccnt+=1
     elif C==0 and SR.detect==True:
         SR.detect=False
-        if SR.Ccnt<3:
+        if SR.Ccnt<=3:
             print('인식')
         SR.Ccnt=0
 
     print(C)
-    if SR.beforeC==0 and C>150:
+    if SR.beforeC==0 and C>180:
         SR.detect=True
     SR.beforeC=C
     if SR.cnt==10:
